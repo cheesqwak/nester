@@ -1,12 +1,14 @@
 # nester
 Simple script that suggest the most nested path to call any script.   
+
 ps, top, and htop outputs truncate the path of the processes that are launched.   
 As a result, you can hide your script's path if the path you are calling it from is long enough.   
-Using dotdots, you can call your script from any path.    
+Using dotdots, you can call your script from any path.  
+
 This is useful when you do not have root privileges, and are only able to drop a script inside an obvious folder (/home/$USER, /tmp/, /var/tmp/...)
 
 #### Usage
-`./nester <root path> <path of your script>`
+`nester <root path> <path of your script>`
 
 #### Example :
 `$ ./nester /usr/lib/ /tmp/nasty.sh`   
