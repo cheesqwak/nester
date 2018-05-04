@@ -1,0 +1,16 @@
+#!/bin/bash
+if test $# -lt 2
+then
+     echo "USAGE : nester <root path> <path of your script>"
+     echo "EXAMPLE : ./nester /var/lib/ /tmp/nasty.sh"
+     exit 1
+fi
+ROOT_PATH=$1
+SCRIPT_PATH=$2
+
+LAUNCH_PATH=`find $ROOT_PATH -type d 2>/dev/null| awk '{ if(length>x) {x =length; y=$0} } END {print y}'`
+NB_SLASHS=`echo $LAUNCH_PATH | awk -F"/" '{print NF-1}'`
+DOTSDOTS=""
+for (( c=1; c<=$NB_SLASHS; c++)) ; do DOTSDOTS="$DOTSDOTS/.." ; done
+FINAL_PATH=$LAUNCH_PATH$DOTSDOTS$SCRIPT_PATH
+echo $FINAL_PATH
