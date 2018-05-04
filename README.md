@@ -12,6 +12,7 @@ This is useful when you do not have root privileges, and are only able to drop a
 
 #### Example :
 `$ ./nester /usr/lib/ /tmp/nasty.sh`   
+
 **output :**
 `/usr/lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/socks-proxy-agent/node_modules/agent-base/node_modules/es6-promisify/node_modules/es6-promise/lib/es6-promise/promise/../../../../../../../../../../../../../../../../../../../tmp/nasty.sh`
 
