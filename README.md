@@ -18,5 +18,3 @@ This is useful when you do not have root privileges, and are only able to drop a
 
 **htop output**
 ![alt text](images/htop.png)
-
-probz to Yacine S.
